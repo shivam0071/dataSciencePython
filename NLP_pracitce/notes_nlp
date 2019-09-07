@@ -58,3 +58,15 @@ Data Acquisition -> Data Cleaning -> Model Training and Building -> Model Testin
                                                  |                   |
                                                  |--------------------
 
+
+
+TOPIC MODELING
+
+Allows for us to efficiently analyze larg volumes of text by
+ clustering documents into topics.
+
+
+Latent Dirichlet Allocation - LDA
+Documents with similar topics use similar group of words
+Latent topics can then be found b searching groups of words that frequently occur
+together in documents across the corpus
