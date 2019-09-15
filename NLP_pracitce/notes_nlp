@@ -70,3 +70,67 @@ Latent Dirichlet Allocation - LDA
 Documents with similar topics use similar group of words
 Latent topics can then be found b searching groups of words that frequently occur
 together in documents across the corpus
+
+
+PERCEPTRON
+
+Input 0(12)------Weight 0(12 * 0.5 = 6) ---------
+                                    ((Activation Function)) --------------> Output ( 1 )
+Input 1(4) ------Weight 1 (4 * -1 = -4 )---------
+
+Bias --------Weight +1 ------------------------
+
+
+There area many types of activation Functions
+for eg if the sum of the above input is > 0 then output is 1
+else  0
+so for above its 1
+
+Bias Terms - If the input is 0
+
+n
+E w(i)x(i) + b
+i=0
+
+
+Neural Networks
+
+Input Layer    {hidden layer}        Output Layer
+
+O -----                    O -------\
+            O -------                \
+O ------                   O -------- O
+            O -------                 /
+O ------                   O --------/
+
+If we have 3 or more hidden layers then its a deep network
+
+1|   |-----
+ |   |
+ |----
+0|__________
+
+z = wx + b
+
+
+2.) Another activation function is sigmoid function
+
+f(x) = 1
+     -----
+     1 + -(x)
+         e
+and we can replace x by z
+so x becomes wx + b
+
+
+3.) Hyperbolic Tangent: tanh(z)
+in this output is from  -1 to 1
+
+         sinh x    e(x) - e(-x)
+tanh x = ------ =  ------------
+         cosh x     e(x) + e(-x)
+
+
+4.) ReLU Rectified Linear Unit ( best performance in many situations)
+
+max(0, z) = max ( 0 , wx + b)
