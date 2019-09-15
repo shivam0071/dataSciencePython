@@ -83,7 +83,30 @@ model.summary()
 model.fit(scaled_X_train,y_train,epochs=150, verbose=2)
 # no of times it should go over the inputs
 # verbose for progress bars
-import pdb
-pdb.set_trace()
-print(scaled_X_test)
-print(model.predict_classes(scaled_X_test))
+
+
+print(model.predict(scaled_X_test)) # probability of 0,1 or 2 in terms of numbers
+print(model.predict_classes(scaled_X_test)) # class only [0,1,2]
+
+predictions = model.predict_classes(scaled_X_test)
+y_test.argmax(axis=1) # back to class... giving us the index positions
+
+print(y_test)
+
+from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
+
+print(confusion_matrix(y_test.argmax(axis=1),predictions))
+print(classification_report(y_test.argmax(axis=1),predictions))
+print(accuracy_score(y_test.argmax(axis=1),predictions))
+
+
+
+# SAVING the MODEL
+model.save("myfirstmodel.h5")
+
+
+# LOADING THE MODEL
+
+from keras.models import load_model
+
+# new_model = load_model("myfirstmodel.h5")
