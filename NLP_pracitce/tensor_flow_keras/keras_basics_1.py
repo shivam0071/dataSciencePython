@@ -47,7 +47,7 @@ scaled_X_test = scaler_object.transform(X_test)
 # [[ 0.52941176  0.36363636  0.64285714  0.45833333]
 
 
-# Now buid the neural network with Keras
+# Now build the neural network with Keras
 
 
 from keras.models import Sequential
@@ -77,7 +77,6 @@ model.add(Dense(3, input_dim= 4, activation='softmax'))  # we have 3 neurons as
 
 model.compile(loss = 'categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-
 model.summary()
 
 model.fit(scaled_X_train,y_train,epochs=150, verbose=2)
@@ -89,7 +88,7 @@ print(model.predict(scaled_X_test)) # probability of 0,1 or 2 in terms of number
 print(model.predict_classes(scaled_X_test)) # class only [0,1,2]
 
 predictions = model.predict_classes(scaled_X_test)
-y_test.argmax(axis=1) # back to class... giving us the index positions
+print(y_test.argmax(axis=1)) # back to class... giving us the index positions
 
 print(y_test)
 

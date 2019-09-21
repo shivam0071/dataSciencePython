@@ -134,3 +134,46 @@ tanh x = ------ =  ------------
 4.) ReLU Rectified Linear Unit ( best performance in many situations)
 
 max(0, z) = max ( 0 , wx + b)
+
+
+
+
+RECURRENT Neural Network
+
+Works best on sequence data such as
+sales data
+Audio
+Sentences
+music
+
+A RNN sends the output back to itself....as a feedback?
+
+output at t-1       output at t           output at t + 1
+   /|\                  /|\                     /|\
+    | output             |                       |
+    O ------->           O ------->              O ------->
+   /|\                  /|\                     /|\
+    |                    |                       |
+input at t - 1         input at t           input at t + 1
+
+
+-------------------------------------------------------------------->
+                    TIME --->
+Each set of neuron has 2 inputs
+1.) one as a feedback (memory cells)
+2.) a new one
+
+So this was for just one neuron....the same thing can be done with any neurons
+
+
+   x ---------- O    --------
+x ----------  O   --------  y  ------->
+  x ---------- O    --------|
+         /|\                |
+          |__________________
+            to all the three
+
+
+
+LSTM - Long Short Term Memory Units -- for text generation
+GRU - Gated Recurrent Unit
