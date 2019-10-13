@@ -1,0 +1,5 @@
+1.) Rock Paper Scissor Game
+Recognise hands and determine if its a rock paper or scissors ?
+The hardcoded version would be 10k + lines of code and would still fail as there would
+be so many dfferent hands and way of making rock papaer scissors
+

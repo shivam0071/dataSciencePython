@@ -1,6 +1,5 @@
 import spacy
-
-
+;
 def read_file(filpath):
   with open(filpath) as f:
     str_text = f.read()
